@@ -1,9 +1,9 @@
-# bot.py
 import requests
 import time
+import os
 
-BOT_TOKEN = 'your_bot_token_here'
-CHAT_ID = 'your_chat_id_here'
+BOT_TOKEN = os.environ['BOT_TOKEN']
+CHAT_ID = os.environ['CHAT_ID']
 MESSAGE = 'I love you ❤️'
 
 def send_message():
@@ -17,4 +17,4 @@ def send_message():
 
 while True:
     send_message()
-    time.sleep(3600)  # 1 hour
+    time.sleep(3600)
